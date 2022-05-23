@@ -1,0 +1,19 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.body {
+  font: arial;
+}
+
+.letters {
+  color: aliceblue;
+  display: inline;
+  padding: 5px 10px;
+  font-weight: bold;
+  background-color: darkblue;
+}
+
+#userplay {
+  margin-top: 25px;
+}
