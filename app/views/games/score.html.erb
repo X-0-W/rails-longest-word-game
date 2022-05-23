@@ -2,8 +2,16 @@
 <!-- If all 3 calculate score -->
 <!-- Generate response based on one of 3 options -->
 
+
 <h1>RESULTS</h1>
 
-
+<p><% if (@word_exists == true) && (@in_grid == true) %>
+              <%= "Congratulations! #{params[:answer].upcase} is a valid English word!" %>
+          <% elsif (@word_exists == true) && (@in_grid == false) %>
+              <%= "Sorry, #{params[:answer].upcase} cannot be built out of #{params[:grid]}" %>
+          <% elsif (@word_exists == false) %>
+              <%= "Sorry, but #{params[:answer].upcase} does not appear to be a valid English word" %>
+            <% end %>
+</p>
 
 <p><%= link_to "Play again!", new_path %></p>

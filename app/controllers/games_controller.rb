@@ -25,7 +25,7 @@ class GamesController < ApplicationController
   end
 
   def check_attempt(attempt, grid)
-    grid_values = grid.gsub(/\s+/, '').split
+    grid_values = grid.split(' ')
     grid_hash = grid_values.tally
     attempt_hash = attempt.upcase.chars.tally
     i = 0
